@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruch Town</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo.jpeg" alt="Cruch Town Logo" class="nav-logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chips.html">Chips</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="search-container">
+                    <input type="text" id="search" placeholder="Search ..." onkeyup="handleSearch(event)">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Welcome Section with Image Background -->
+<section class="welcome-section">
+    <div class="image-background">
+        <img src="inback.jpeg" alt="Background Image">
+    </div>
+    <div class="welcome-title">
+        <h1>Welcome to Cruch Town</h1>
+        <h4>"Big Crunch, Bold Flavor, Every Time!"</h4>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+    <h1 class="about"><center>About Us</center></h1>
+    <p class="aboutstones">
+        At Crunch Town, we bring you the world’s most iconic and flavorful chips, perfect for every craving. Whether you love bold spices, cheesy goodness, or classic crunch, we’ve got something for everyone!
+    </p>
+
+    <!-- Product Catalog -->
+    <h1 class="best">Chips</h1>
+    <section id="catalog">
+        <div class="product" data-name="Doritos (Big Bag)">
+            <img src="c1.webp" alt="  Doritos (Big Bag)" height="20px" width="15px">
+            <h3>Doritos (Big Bag)</h3>
+            <p>Description:<br>
+                Bold flavors that ignite every bite.</p>
+            <span>$8 BZD</span>
+            <button onclick="addToCart(' Doritos (Big Bag)', 8)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="  Lay’s (Family Size) ">
+            <img src="c2.webp" alt="  Lay’s (Family Size) ">
+            <h3> Lay’s (Family Size) </h3>
+            <p>Description:<br>
+                Classic crunch, timeless taste.</p>
+               
+            <span>$9.99 BZD</span>
+            <button onclick="addToCart('  Lay’s (Family Size) ', 9.99)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="  Cheetos (Medium Bag)">
+            <img src="c3.webp" alt="  Cheetos (Medium Bag)">
+            <h3>  Cheetos (Medium Bag)</h3>
+            <p>Description:<br>
+                Crunchy, cheesy, and downright irresistible.
+                </p>
+            <span>$6 BZD</span>
+            <button onclick="addToCart('  Cheetos (Medium Bag)', 6)">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Green Bounty. All rights reserved.</p>
+    </footer>
+</body>
+</html>
